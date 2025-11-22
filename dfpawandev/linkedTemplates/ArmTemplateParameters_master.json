@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfpawandev"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"ds_onprem_file_location_password": {
+			"value": ""
+		},
+		"ls_datalake_crm_sales_data_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://sapawandev.dfs.core.windows.net/"
+		},
+		"ds_onprem_file_location_properties_typeProperties_host": {
+			"value": "C:\\CRM_Sales_Opportunities"
+		},
+		"ds_onprem_file_location_properties_typeProperties_userId": {
+			"value": "pawan"
+		},
+		"ls_datalake_crm_sales_data_properties_typeProperties_url": {
+			"value": "https://sapawandev.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
