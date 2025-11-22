@@ -1,0 +1,9 @@
+{
+	"name": "dfpawandev",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "83043180-17d7-4dc8-b121-7b879c5f8a7b",
+		"tenantId": "24cfbb97-38c7-4b61-812d-8147cb0e9667"
+	}
+}
