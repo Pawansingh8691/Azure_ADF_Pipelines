@@ -1,0 +1,25 @@
+{
+	"name": "tr_run_copy_onprem_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_copy_onprem_to_cloud",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-11-22T12:30:00",
+				"endTime": "2025-11-25T12:30:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
