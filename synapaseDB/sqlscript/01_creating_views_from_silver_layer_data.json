@@ -1,0 +1,17 @@
+{
+	"name": "01_creating_views_from_silver_layer_data",
+	"properties": {
+		"content": {
+			"query": "-- creating database in serverless SQL pool\n\nCREATE DATABASE sales_db;\n\n-- creating view for accounts data from silver layer data\n\nUSE sales_db;\n\nCREATE VIEW dbo.vw_accounts AS\nSELECT * FROM OPENROWSET(\n    BULK 'https://sapawandev.dfs.core.windows.net/crm-sales-data/silver/accounts.csv/**',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE\n) AS result\n\n\n-- creating view for data_dictionary data from silver layer data\n\nCREATE VIEW dbo.vw_data_dictionary AS\nSELECT * FROM OPENROWSET(\n    BULK 'https://sapawandev.dfs.core.windows.net/crm-sales-data/silver/data_dictionary.csv/**',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    FIELDTERMINATOR = ',',\n    FIELDQUOTE = '',\n    HEADER_ROW = TRUE\n) AS result\n\n-- creating view for products data from silver layer data\n\nCREATE VIEW dbo.vw_products AS\nSELECT * FROM OPENROWSET(\n    BULK 'https://sapawandev.dfs.core.windows.net/crm-sales-data/silver/products.csv/**',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE\n) AS result\n\n-- creating view for sales_pipeline data from silver layer data\n\nCREATE VIEW dbo.vw_sales_pipeline AS\nSELECT * FROM OPENROWSET(\n    BULK 'https://sapawandev.dfs.core.windows.net/crm-sales-data/silver/sales_pipeline.csv/**',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE\n) AS result\n\n-- creating view for sales_teams data from silver layer data\n\nCREATE VIEW dbo.vw_sales_teams AS\nSELECT * FROM OPENROWSET(\n    BULK 'https://sapawandev.dfs.core.windows.net/crm-sales-data/silver/sales_teams.csv/**',\n    FORMAT = 'CSV',\n    PARSER_VERSION = '2.0',\n    HEADER_ROW = TRUE\n) AS result",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sales_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
