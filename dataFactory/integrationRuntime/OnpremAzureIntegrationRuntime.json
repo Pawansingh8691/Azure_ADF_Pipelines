@@ -1,0 +1,6 @@
+{
+	"name": "OnpremAzureIntegrationRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
